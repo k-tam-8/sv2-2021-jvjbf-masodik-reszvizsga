@@ -9,12 +9,13 @@ public class Office extends Building {
         this.company = company;
         this.numberOfTablesPerLevel = numberOfTablesPerLevel;
         if ((numberOfTablesPerLevel * 2) > area || (numberOfTablesPerLevel * 5) < area) {
-        } else throw new IllegalArgumentException("Nem megfelelő szám!");
+            throw new IllegalArgumentException("Nem megfelelő szám!");
+        }
     }
 
     @Override
     public int calculateNumberOfPeopleCanFit() {
-        return 0;
+        return (int) (super.getArea() * super.getLevels() / Home.SQUARE_METERS_NEED_PER_PERSON);
     }
 
     public String getCompany() {

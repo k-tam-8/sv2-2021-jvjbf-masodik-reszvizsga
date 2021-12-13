@@ -74,7 +74,7 @@ class CityTest {
 
     @Test
     void testIsThereBuildingWithMorePeopleThan() {
-        assertTrue(city.isThereBuildingWithMorePeopleThan(494));
-        assertFalse(city.isThereBuildingWithMorePeopleThan(496));
+       assertTrue(city.isThereBuildingWithMorePeopleThan(494));
+       assertFalse(city.isThereBuildingWithMorePeopleThan(496));
     }
 }
